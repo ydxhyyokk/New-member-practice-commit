@@ -4,6 +4,24 @@ You can either add a file via Graphical User Interface (GUI) or commandline. You
 
 **AND PLEASE DO NOT ADD FILES BY UPLOADING THEM TO GITHUB**
 
+## Table of Contents
+
+- [New-member-practice-commit](#new-member-practice-commit)
+  - [Table of Contents](#table-of-contents)
+  - [GUI Instructions](#gui-instructions)
+    - [Clone this repo](#clone-this-repo)
+    - [Create a new branch](#create-a-new-branch)
+    - [Add file and commit](#add-file-and-commit)
+    - [Push branch](#push-branch)
+    - [Create Pull Request](#create-pull-request)
+  - [Commanline Instructions](#commanline-instructions)
+    - [Clone this repo (CLI)](#clone-this-repo-cli)
+    - [Create a new branch (CLI)](#create-a-new-branch-cli)
+    - [Add File (CLI)](#add-file-cli)
+    - [Commit (CLI)](#commit-cli)
+    - [Push branch (CLI)](#push-branch-cli)
+    - [Create Pull Request (CLI)](#create-pull-request-cli)
+
 ## GUI Instructions
 
 You can use the [GitHub Desktop](https://desktop.github.com/) Software or whatever git clients you like (e.g. GitKraken). This doc will use GitHub Desktop for reference.

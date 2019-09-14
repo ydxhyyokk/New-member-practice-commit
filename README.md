@@ -21,6 +21,7 @@ You can either add a file via Graphical User Interface (GUI) or commandline. You
     - [Commit (CLI)](#commit-cli)
     - [Push branch (CLI)](#push-branch-cli)
     - [Create Pull Request (CLI)](#create-pull-request-cli)
+  - [Further Reading](#further-reading)
 
 ## GUI Instructions
 
@@ -65,6 +66,8 @@ Final steps! Click `publish branches` (or `push origin` if the branch is already
 For your commits to be merged into `master` branch, you need to create a Pull Request on GitHub.com
 
 Please refer to the [official GitHub documentation](https://help.github.com/en/articles/creating-a-pull-request#creating-the-pull-request)
+
+Alternatively, you could just click `Branch > Create Pull Request` in GitHub Desktop, you will be redirected to GitHub.com to continue.
 
 ## Commanline Instructions
 
@@ -121,11 +124,23 @@ Untracked files:
         pics/
 ```
 
+You can confirm that the file(s) added are listed under the `Changes to be committed` section
+
 ### Commit (CLI)
 
 ```console
-$ git commit -m "your commit message (shorter than 69 words)"
+$ git commit -m "your commit message (shorter than 50 words)"
 ```
+
+Alternatively, you could just do `git commit` and use your designated editor to edit commit message. The editor is specified in the `core.editor` setting of git.
+
+For git messages, please refer to the [50/72 format](https://stackoverflow.com/questions/2290016/git-commit-messages-50-72-formatting).
+
+Simply put, it's
+
+1. First line being 50 characters or less (equivalent to the "summary" part in GitHub Desktop)
+2. Followed by a blank line
+3. Remaining texts wrapped at 72 characters (new line after every 72 characters). These lines are equivalent to the "description" part in GitHub Desktop
 
 ### Push branch (CLI)
 
@@ -148,3 +163,19 @@ $ git push --set-upstream origin yeshu/add-new-file
 ### Create Pull Request (CLI)
 
 After pushing, you should setup a pull request. Please refer to the section [Create Pull Request](#create-pull-request).
+
+## Further Reading
+
+To discover what happens when you `pull`, `push`, `commit`, `add`, or `checkout`, you can refer to the following sites:
+
+- [Git SCM - Getting Started: Git Basics](https://git-scm.com/book/en/v1/Getting-Started-Git-Basics)
+- [Git SCM - Git Branching: Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+- [Git SCM - Git Branching: Branching Workflows](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
+- [Stack Overflow - What's the difference between HEAD, working tree and index, in Git?](https://stackoverflow.com/questions/3689838/whats-the-difference-between-head-working-tree-and-index-in-git)
+- [Understanding Git: Data Model](https://hackernoon.com/https-medium-com-zspajich-understanding-git-data-model-95eb16cc99f5)
+- [Understanding Git: Branching](https://hackernoon.com/understanding-git-branching-2662f5882f9)
+- [Understanding Git: Index](https://hackernoon.com/understanding-git-index-4821a0765cf)
+
+Alternatively, if you don't like reading long texts, you can watch this YouTube video (about 82-min long)
+
+- [\[VIDEO\] Introduction to Git with Scott Chacon of GitHub](https://www.youtube.com/watch?v=ZDR433b0HJY)

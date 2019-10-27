@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html lang="en">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="Twilight">
+  <title>Todolist</title>
+ </head>
+
+ <body>
+  <h3>·Todolist</h3>
+  <h4>·Append:</h4>
+  <form action="">
+	&nbsp;&nbsp;&nbsp;&nbsp;<input id="add_todolist"></input>
+	&nbsp;&nbsp;
+	<input id="submit_todolist" type="button" value="Submit"></input>
+  </form>
+  <h4>·Todolist:</h4>
+  <ol id="todolist_list">
+  	<!--
+	template:
+		<li 
+			onclick="del(x)">
+		Todolist_Content
+		</li>
+		#x is the given identity but is not the id.
+		#false means this value does not exist and will not be shown.
+		#type_string means this value exists and will be shown.
+	-->
+  </ol>
+
+  <script>
+
+	//get the elements
+	tdadd = document.getElementById("add_todolist");
+	tdbtn = document.getElementById("submit_todolist");
+	tdshow = document.getElementById("todolist_list");
+
+	//all the todolists, including the deleted ones
+	tdlist = [];
+
+	//submit operation
+	tdbtn.onclick = function(){
+		tdvalue = tdadd.value;
+		tdadd.value='';
+		tdindex = tdlist.length;
+		tdlist.push(tdvalue);
+		update();
+	};
+
+	/**
+	  *update function
+	  *update the tdshow's innerHTML
+	  */
+	function update(){
+		td_all = ""
+		for(i=0; i<tdlist.length; i++){
+			//neglect the deleted ones
+			if(tdlist[i]==false){
+				continue;
+			}
+			else{
+				//see the template in the html part
+				tdhtml = "&nbsp;&nbsp;&nbsp;&nbsp;<li>"+tdlist[i]+"&nbsp;&nbsp;<input type='button' value='Delete' onclick='del("+i+")'/></li><br/>";
+				td_all+=tdhtml;
+			}
+		}
+		//show operation
+		tdshow.innerHTML=td_all;
+	}
+	
+	//delete by the identity
+	function del(id){
+		tdlist[id]=false;
+		update();
+	}
+
+  </script>
+ </body>
+</html>

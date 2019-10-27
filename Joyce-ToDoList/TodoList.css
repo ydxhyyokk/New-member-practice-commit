@@ -1,0 +1,24 @@
+body{
+    line-height: 40px;
+    background-color: aquamarine;
+    font-size: 30px;
+    margin-left: 40%;
+}
+.content{
+    background-color: palegreen;
+    font-size: 20px;
+    width: 300px;
+}
+.submit{
+    background-color: palegreen;
+    font-size: 20px;
+}
+.list{
+    margin: 0 auto;
+}
+.delbtn{
+    background-color: khaki;
+    font-size: 20px;
+}
+
+

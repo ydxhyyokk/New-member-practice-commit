@@ -1,0 +1,53 @@
+<!doctype html
+<html>
+ <head>
+  <title>TODOLIST</title>
+  <meta charset="UTF-8"/>
+ </head>
+ <body>
+  <input id="iptxt"></input>
+  <input type="button" value="submit" id="submit"></input>
+  <br/>
+  <b>when there is any element, click on the element then you can delete it!</b><br/>
+  <font size="4"><span id="show"></span></font>
+ <script>
+ 
+  iptxt = document.getElementById("iptxt");
+  btn = document.getElementById("submit");
+  show = document.getElementById("show");
+  txtval = iptxt.value;
+  lklist = new Array();
+  
+  
+  function single_context(context, id){
+	  color = "#000000";
+	  if (id%2==1){
+		color = "#0000ff";
+	  }
+	  return "&nbsp;&nbsp;&nbsp;&nbsp;<font color='"+color+"'><span onclick='lklist["+id+"]=null;show_context();'>" + context + "</span></font><hr/>";
+  }
+
+  function show_context(){
+	context = "";
+    for ( var i=0; i<lklist.length; i++ )
+    {
+		if (lklist[i]==null)
+		{
+		  continue;
+		}
+		else{
+		  context += single_context(lklist[i], i);
+		}
+    }
+	show.innerHTML=context;
+  }
+  
+  btn.onclick = function(){
+   lklist.push(iptxt.value);
+   show_context();
+   iptxt.value="";
+  }
+  
+ </script>
+ </body>
+</html>

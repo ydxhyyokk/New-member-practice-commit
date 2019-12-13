@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TodoList</title>
+</head>
+<body>
+  <h3><b><center>TODOLIST</center></b></h3>
+  <script src='script/vue.min.js'></script>
+  <div id="root">
+    <div>
+	  <b>Input your TODOLIST:</b>
+      <input v-model="input"/>
+      <button @click="submit">submit</button>
+    </div>
+	<hr/>
+	<b>TODO:</b>
+    <ol>
+	  <show v-for="(todoitem,id) of list" :todoitem='todoitem' :id="id" @clear="clear"></show>
+	</ol>
+  </div>
+  <script>
+    Vue.component('show',{
+        props: ['todoitem', 'id'],
+        template: '<li @click="delclick">{{todoitem}}</li>',
+        methods: {
+          delclick: function(){
+            this.$emit("clear", this.id)
+          }
+        }
+     })
+    new Vue({
+      el: "#root",
+      data: {
+        input: '',
+        list: []
+      },
+      methods: {
+        submit: function(){
+          this.list.push(this.input)
+          this.input = ''
+        },
+		clear: function(key){
+		  this.list.splice(key,1)
+		}
+      }
+    })
+  </script>
+</body>
+</html>

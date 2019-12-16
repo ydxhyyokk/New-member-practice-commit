@@ -1,24 +1,50 @@
 body{
     line-height: 40px;
-    background-color: aquamarine;
     font-size: 30px;
-    margin-left: 40%;
+    margin:0 auto;
+    background-color: aliceblue;
+}
+#sth{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .content{
-    background-color: palegreen;
     font-size: 20px;
     width: 300px;
 }
-.submit{
-    background-color: palegreen;
-    font-size: 20px;
-}
+
 .list{
     margin: 0 auto;
+    padding:0;
+    list-style-type: none;
 }
-.delbtn{
-    background-color: khaki;
+.btn{
+    background-color: lightslategrey;
     font-size: 20px;
+    margin:0 auto;
 }
 
+.btn:hover{
+    font-size: 25px;
+    margin:0 auto;
+    background-color: lightsalmon;
+}
+.done{
+    color: slategrey;
+    text-decoration: line-through;
+}
+.chkbox{
+    zoom: 200%;
+    background-color: lightslategrey;
+}
+.listmem:hover{
+    background-color: lightgrey;
+}
+
+.sent{
+    line-height: 100%;
+    font-size:20px;
+}
 

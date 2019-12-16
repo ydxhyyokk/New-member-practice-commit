@@ -6,14 +6,27 @@
         <link rel="stylesheet" type="text/css" href="TodoList.css">
     </head>
     <body>
-        <script type="text/javascript" src="ToDoList.js"></script>
-        <div>
-            <input type = "text" placeholder = "Add something to your to-do list" id = "content" class = "content">
-            <input type = "button" value = "Submit" class = "submit" onclick="appendTodo();">
-        </div>
-        <div>
-            <ul id = "list">
+        
+        <div id="sth">
+            <!--input todo-->
+            <input type = "text" placeholder = "Add something to your to-do list" class = "content" v-model = "ToDoThing" @keyup.enter = "AppendToDo()" ref = "content">
+            <input type = "button" value = "Submit" class = "btn" @click = "AppendToDo()">
+            <input type = "button" value = "Clear All" class = "btn" @click = "ClearAll()">
+            <p class = "sent">Hit the submit button or enter key to submit the work.</p>
+            <p class = "sent">Click the check box to finish the work.</p>
+            <hr>
+            <p class = "sent">{{TodoSent}}</p>
+            <p class = "sent">{{DoneSent}}</p>
+            <!--display todo-->
+            <ul class = "list">
+                <li v-for = "item in ToDoList" class = "listmem">
+                    <input type = "checkbox" @change = "ChangeState(item)" class = "chkbox">
+                    <label :class = "{todo:!item.IsDone, done:item.IsDone}">{{item.content}}</label>
+                    <input type = "button" @click = "DeleteToDo(item)" value = "Delete" class = "btn">
+                </li>
             </ul>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script type="text/javascript" src="ToDoList.js"></script>
     </body>
 </html>

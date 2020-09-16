@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue-todoList</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="value">
+        <button @click="add()">添加</button>
+        <ul>
+            <li v-for="(list,index) in lists">{{list}}  <a href="##" @click="remove(lists,index)">删除</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            value:'',
+            lists:[]
+        },
+        methods:{
+            add(){
+                this.lists.push(this.value);
+                this.value = '';
+            },
+            remove(arr,index){
+                arr.splice(index,1)
+            }
+        }
+    })
+</script>

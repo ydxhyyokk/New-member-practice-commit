@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Todo list</title>
+  <script src="vue.js"></script>
+  <link rel="stylesheet" href="Todolist.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <section>
+      <label for="addTextBox" contenteditable="true" v-model="name">{{name}}</label>
+      <input type="text" id="addTextBox" name="addTextBox" placeholder="Enter new item" v-on:keyup.enter="addListItem">
+      </section>
+    </header>
+
+    <div class="content">
+      <h1>To do<span id="todocount">{{todoList.length}}</span></h1>
+      <div id="todolist">
+      <transition-group name="list" tag="ol">
+        <li v-for="(i,index) in todoList" v-bind:key="i" class="list-item">
+          <input type="checkbox" v-model="i.done">
+            <p contenteditable="true" v-on:click="updateContent(i,this)">{{ i.name }}</p>
+            <input type="range" min="0" max="10" v-model="i.priority" onchange="sort()">
+            <p>{{i.priority}}</p>
+            <a v-on:click="remove(i)">×</a>
+        </li>
+      </transition-group>
+      </div>
+      
+      <h1>Done<span id="donecount">{{doneList.length}}</span></h1>
+      <div id="donelist">
+        <transition-group name="list" tag="ol">
+          <li v-for="(i,index) in doneList" v-bind:key="i" class="list-item">
+            <input type="checkbox" checked v-model="i.done">
+            <p contenteditable="true" v-on:input="updateContent(i,this)">{{ i.name }}</p>
+            <input type="range" min="0" max="10" v-model="i.priority">
+            <p>{{i.priority}}</p>
+            <a v-on:click="remove(i)">×</a>
+          </li>
+        </transition-group>
+      </div>
+    </div>
+    <div id="clear">
+      <button id="clearbutton" v-on:click="allClear"><h3>All clear</h3></button>
+    </div>
+    {{list}}
+  </div>
+  <script src="Todolist_with_vue.js"></script>
+</body>
+</html>

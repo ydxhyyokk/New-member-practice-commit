@@ -1,0 +1,148 @@
+body {
+    font-family: 'Helvetica Neue', sanserif, serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: white;
+}
+header {
+    height: 50px;
+    background-color: #3DA4E3;
+    color: white;
+}
+header section {
+    margin: 0 auto;
+    width: 40%;
+}
+header section label {
+    float: left;
+    line-height: 50px;
+    font-size: 28px;
+    font-weight: 400;
+}
+#addTextBox {
+    float: right;
+    margin-top: 11px;
+    width: 60%;
+    height: 24px;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 black;
+    font-size: 18px;
+    text-indent: 10px;
+}
+h1 {
+    position: relative;
+}
+h1 span {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border-radius: 23px;
+    line-height: 23px;
+    font-size: 18px;
+    text-align: center;
+    background: #DADADA;
+}
+.content {
+    width: 40%;
+    margin: 0 auto;
+}
+#todolist li {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 32px;
+    box-shadow: 0 3px 0 red;
+    line-height: 32px;
+    background-color: #DADADA;
+    list-style: none;
+}
+.list-item{
+	transition: all 0.5s;
+}
+.list-enter, .list-leave-to {
+	opacity: 0;
+	transform: translateY(15px);
+}
+.list-leave-active {
+	position: absolute;
+}
+#donelist li {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 32px;
+    box-shadow: 0 3px 0 green;
+    line-height: 32px;
+    background-color: #DADADA;
+    list-style: none;
+}
+ol li input[type="checkbox"] {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+ol li input[type="range"] {
+    position: absolute;
+    top: 4px;
+    right: 35px;
+    width: 80px;
+    height: 20px;
+    cursor: pointer;
+}
+p{
+    margin: 0;
+}
+ol li p {
+    display: inline-block;
+    margin-left: 35px;
+}
+ol li p input{
+    top: 3px;
+    margin-left: 0;
+    width: 40%;
+    height: 16px;
+    font-size: 16px;
+    line-height: 14px;
+}
+
+ol li a {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    display: inline-block;
+    border: 1px;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 26px;
+    line-height: 10px;
+    color: red;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: gray;
+}
+
+#clear {
+    width: 100px;
+    margin: 0 auto;
+}
+#clearbutton {
+    font-weight: 200;
+    border: 1px solid #4DA947;
+    background-color: #4DA947;
+    color: white;
+    cursor: pointer;
+}
+button h3{
+    font-size: 13px;
+    line-height: 13px;
+}

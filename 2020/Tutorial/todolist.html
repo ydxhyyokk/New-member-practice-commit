@@ -1,0 +1,32 @@
+<!-- Source: https://blog.csdn.net/z_cas/article/details/78714289 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>todolist-prime</title>
+  <link rel="stylesheet" href="yuansheng.css">
+</head>
+<body>
+  <header>
+    <section>
+      <label for="add_list">My todolist</label>
+      <input type="text" id="add_list" name="add_list" placeholder="type here" required>
+    </section>
+  </header>
+ 
+  <div class="content">
+    <h1>TODO<span id="todocount"></span></h1>
+    <ol id="todolist">
+    </ol>
+ 
+    <h1>DONE<span id="donecount"></span></h1>
+    <ol id="donelist">
+    </ol>
+  </div>
+ 
+  <div id="clear">
+  	<button id="clearbutton"><h3>Clear all</h3></button>
+  </div>
+  <script src="todolist-prime.js"></script>
+</body>
+</html>

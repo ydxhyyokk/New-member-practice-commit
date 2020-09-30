@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title> Random JPN! </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button class="kata_button" onclick="a[0] = randomNum(0, 46); getElementById('display').innerHTML = print.kata(a[0]); getElementById('pronunce').innerHTML = ''">片假名</button>
+            <button class="hira_button" onclick="a[0] = randomNum(0, 46); getElementById('display').innerHTML = print.hira(a[0]); getElementById('pronunce').innerHTML = ''">平假名</button>
+        </div>
+        <h1 id="display"></h1>
+        <div class="pronunce_container">
+            <div class="pronun_button">
+                <button class="pronun_button" onclick="getElementById('pronunce').innerHTML = print.pronun(a[0])">显示读音</button>
+            </div>
+            <h2 id="pronunce"></h2>
+        </div>
+
+    </div>
+    <script src="random-UTF16BE.js"></script>
+</body>
+
+</html>

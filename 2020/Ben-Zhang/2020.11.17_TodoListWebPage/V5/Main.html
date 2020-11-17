@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>My Todolist</title>
+    <link rel="stylesheet" type="text/css " href="Style.css" />
+    <!-- meta name="viewport" content="width=device-width, initial-scale=1.0, userscalable=no, maximum=1.0, minimum=1.0" /-->
+</head>
+
+<body>
+    <div class="coffee">
+        <div class="handle"></div>
+        <div class="cup"></div>
+    </div>
+    <div class="list">
+        <div class="todoTitle"> Todo </div>
+        <div class="todo" id="todo">
+            <!--
+            <div class="task" id="2222">
+                <li> 测试1 </li>
+                <div onclick="deleteTask(测试1)" class="deleteButton"> × </div>
+            </div>
+            <div class="task">
+                <li> 测试2 </li>
+                <div onclick="deleteTask(测试2)" class="deleteButton"> × </div>
+            </div>
+            -->
+        </div>
+        <div class="finishedTitle"> Finished </div>
+        <div class="finished" id="finished">
+
+        </div>
+    </div>
+    <div class="pencile"></div>
+    <div class="phone">
+        <div class="AddTask">
+            <form name="AddTask">
+                <input type="text" name="taskContent" id="taskContent" />
+            </form>
+            <div class="buttons">
+                <button class="formButtons" onclick="SubmitTask()" id="submit"> Submit </button>
+                <button class="formButtons" onclick="saveData()" id="save"> Save </button>
+                <button class="formButtons" onclick="loadData()" id="load"> Load </button>
+            </div>
+        </div>
+        <div class="time" id="time"></div>
+    </div>
+</body>
+
+<script src="Script.js "></script>
+
+</html>

@@ -1,0 +1,325 @@
+@keyframes newTask {
+    0% {
+        transform: translate(-10px,0px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translate(0px,0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes listIn {
+    0% {
+        transform: translate(0px,20vh);
+        opacity: 80%;
+    }
+    70% {
+        transform: translate(0px,-1vh);
+    }
+    100% {
+        transform: translate(0px,0vh);
+        opacity: 100%;
+    }
+}
+
+@keyframes coffeeIn {
+    0% {
+        transform: translate(-20vw,0px) rotate(90deg);
+    }
+    77% {
+        transform: translate(0.5vw,0px) rotate(-3deg);
+    }
+    100% {
+        transform: translate(0vw,0px) rotate(0deg);
+    }
+}
+
+@keyframes phoneIn {
+    0% {
+        transform: translate(30vw,20vw) rotate(-40deg) scale(0.4);
+    }
+    70% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: translate(0vw,0vw) rotate(0deg) scale(1);
+    }
+}
+
+@font-face {
+    font-family: listFont;
+    src: url(fonts/AbrilFatface-Regular.ttf);
+}
+
+@font-face {
+    font-family: timeFont;
+    src: url(fonts/AGENCYR.TTF);
+}
+
+@font-face {
+    font-family: taskFont;
+    src: url(fonts/HanYiHanShiTiJian-1.ttf);
+}
+
+body {
+    width: 100%;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    display: block;
+    background-color: rgb(240, 224, 172);
+    overflow: hidden;
+}
+
+
+/*
+div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}*/
+
+div.coffee {
+    float: left;
+    margin: -3vw 3vw 0vw 3vw;
+    transition: ease-in-out 0.5s;
+    animation: coffeeIn 1.1s ease-in-out;
+}
+
+div.coffee:hover {
+    transform: rotate(-10deg);
+}
+
+div.coffee:active {
+    transform: translate(-3px,-3px);
+}
+
+div.cup {
+    z-index: 2;
+    margin: auto;
+    width: 10vw;
+    height: 10vw;
+    background-color: rgb(94, 33, 33);
+    border-width: 2vw;
+    border-style: solid;
+    border-color: white;
+    border-radius: 50%;
+    transform: translate(0,0);
+}
+
+div.handle {
+    z-index: 1;
+    width: 2.5vw;
+    height: 6vw;
+    margin: auto;
+    background-color: rgb(245, 245, 245);
+    border-radius: 1vw;
+    transform: translate(-4vw,17vw) rotate(30deg);
+}
+
+div.list {
+    z-index: 99;
+    float: left;
+    width: 45vw;
+    height: 80vh;
+    margin-top: 20vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.151);
+    font-family: listFont;
+    overflow: scroll;
+    animation: listIn 1s ease-out;
+}
+
+div.todoTitle,.finishedTitle {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7px;
+    padding: 2.5px 0px;
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+div.finishedTitle {
+    width: 140px;
+    margin-top: 13px;
+}
+
+div.task,.taskFinished {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin: 2px 0px;
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+    animation: newTask 0.5s;
+    transition: ease-out 0.1s;
+    font-family: taskFont;
+}
+
+div.task:hover,.taskFinished:hover {
+    opacity: 70%;
+    transform: translate(1px,0px);
+}
+
+div.deleteButton,.finishButton,.deleteButtonf {
+    float: right;
+    width: 23px;
+    height: 23px;
+    margin: 3.5px;
+    margin-left: 0px;
+    border-radius: 11.5px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: listFont;
+    color: white;
+}
+
+div.finishButton {
+    color: rgb(154, 212, 113);
+    line-height: 24px;
+    font-weight: 400;
+}
+
+div.deleteButton,.deleteButtonf {
+    color: rgb(201, 111, 111);
+    line-height: 22px;
+    font-weight: 1000;
+}
+
+div.deleteButton:hover,.finishButton:hover,.deleteButtonf:hover {
+    background-color: rgb(194, 194, 194);
+    transition: ease-out 0.3s;
+}
+
+div.deleteButton:active,.deleteButtonf:active {
+    background-color: rgb(158, 102, 102);
+    transform: scale(0.9);
+    transition: ease-out 0.1s;
+}
+
+div.finishButton:active {
+    background-color: rgb(122, 160, 104);
+    transform: scale(0.9);
+    transition: ease-out 0.1s;
+}
+
+li.taskcontent,.taskcontentf {
+    height: 100%;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+li {
+    display: block;
+    float: left;
+}
+
+div.phone {
+    float: right;
+    width: 22vw;
+    height: 60vw;
+    margin-top: 3vw;
+    background-image: url(img/BG1.jpg);
+    background-size: 35vw;
+    /* background-color: rgb(114, 128, 126); */
+    border-radius: 3vw 0 0 3vw;
+    border-width: 4vw 0 2vw 2vw;
+    border-style: solid;
+    border-color: rgb(63, 63, 63);
+    box-shadow: 0px 0px 10px rgba(82, 82, 82, 0.753);
+    animation: phoneIn 0.8s ease-out;
+}
+
+div.AddTask {
+    width: 100%;
+    margin: 2vw auto;
+}
+
+form {
+    width: 80%;
+    margin: auto;
+}
+
+#taskContent {
+    width: 15vw;
+    height: 3vw;
+    margin-left: 1.3vw;
+    border-style: hidden;
+    border-radius: 1.5vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    outline-style: hidden;
+    outline-width: 0px;
+}
+
+div.buttons {
+    width: 16.5vw;
+    height: 2vw;
+    margin-left: 3.2vw;
+    margin-top: 1vw;
+}
+
+button.formButtons {
+    width: 4vw;
+    height: 2vw;
+    margin: 0 0 0 0.5vw;
+    padding: 0;
+    border-style: hidden;
+    border-radius: 1vw;
+    outline-style: hidden;
+    outline-width: 0px;
+    background-color: rgba(0, 0, 0, 0.664);
+    font-size: 1vw;
+    font-family: timeFont;
+    font-weight: 700;
+    color: white;
+    transition: ease-in-out 0.1s;
+}
+
+button.formButtons:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.658);
+}
+
+button.formButtons:active {
+    transform: scale(0.9);
+    background-color: rgba(219, 219, 219, 0.774);
+}
+
+#submit {
+    width: 5vw;
+}
+
+div.time {
+    width: 60%;
+    height: 9vw;
+    padding: 10%;
+    line-height: 3vw;
+    margin: 20px auto 0px auto;
+    background-color: rgba(0, 0, 0, 0.288);
+    border-radius: 4vw;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 600;
+    font-family: timeFont;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+/* div.heading {
+    background-color: red;
+}
+
+div.uplaod {
+    background-color: blue;
+}
+
+div.list {
+    background-color: green;
+} */

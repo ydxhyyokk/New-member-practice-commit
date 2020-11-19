@@ -1,0 +1,11 @@
+I finish this code with the helps from these sources:
+ ·How to use javascript to operate with <table> :
+    https://blog.csdn.net/qq_37902949/article/details/81056551
+    https://blog.csdn.net/summerhmy/article/details/82892271
+ ·The meaning of '$' in javascript:
+    https://blog.csdn.net/qq_42618969/article/details/88569385
+ ·What is jQuery and how to use it:
+    https://m.runoob.com/jquery/jquery-tutorial.html
+ ·How to read and write .json files:
+    https://jingyan.baidu.com/article/22a299b56abc04de18376a54.html
+    https://www.cnblogs.com/liutianzeng/p/10483449.html

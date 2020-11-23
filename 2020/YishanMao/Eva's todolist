@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>MYS·Todo List</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
+
+<div class="todoList">
+        <div class="cover-img">
+            <div class="cover-inner">
+                <h3>TodoList</h3>
+            </div>
+        </div>
+        <div class="content">
+            <form class="add">
+                <input type="text" name="add" placeholder="你又要咕了吗">
+                <div class="input-buttons">
+                    <a href="#" class="add-todo">
+                        <i class="fas fa-plus add"></i>
+                    </a>
+                </div>
+            </form>
+            <ul class="todos">
+                <li>
+                    <input type="checkbox" id="todo_1" />
+                    <label for="todo_1">
+                        <span class="check"></span>数学作业
+                    </label>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li>
+                    <input type="checkbox" id="todo_2" />
+                    <label for="todo_2">
+                        <span class="check"></span>改生物IA
+                    </label>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li>
+                    <input type="checkbox" id="todo_3" />
+                    <label for="todo_3">
+                        <span class="check"></span>给猫剪指甲
+                    </label>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li>
+                    <input type="checkbox" id="todo_4" />
+                    <label for="todo_4">
+                        <span class="check"></span> 给冰箱除霜
+                    </label>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+  <script  src="js/script.js"></script>
+
+</body>
+</html>

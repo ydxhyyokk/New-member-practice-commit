@@ -1,0 +1,44 @@
+body {
+    width: 100%;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    display: block;
+    background-color: rgb(240, 224, 172);
+}
+
+img.zfb,.wx {
+    height: 60vw;
+    margin-top: 5.5vw;
+    margin-left: 5.5vw;
+    transition: ease-out 0.3s;
+    border-radius: 5vw;
+}
+
+img.zfb:hover,.wx:hover {
+    transform: translate(0,2vw);
+    transition: ease-out 0.3s;
+}
+
+button.return {
+    width: 20vw;
+    height: 5vw;
+    margin: 5vw 40vw 5vw 40vw;
+    border-style: none;
+    border-radius: 5vw;
+    outline-style: none;
+    font-size: 3vw;
+    font-weight: 900;
+    color: rgb(85, 85, 85);
+}
+
+button.return:hover {
+    background-color: rgb(194, 194, 194);
+    transition: ease-out 0.3s;
+}
+
+button.return:active {
+    background-color: rgb(146, 146, 146);
+    transform: scale(0.9);
+    transition: ease-out 0.1s;
+}

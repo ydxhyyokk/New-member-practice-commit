@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title> test </title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div id="toDoList">
+        <div v-for="task in tasklist">
+            <div class="task">
+                <li> {{ task.text }} </li>
+                <div onclick="deleteTask()" class="deleteButton"> × </div>
+            </div>
+            <!--newtask></newtask-->
+        </div>
+    </div>
+    <script src="../../vue.js"></script>
+    <script src="test.js"></script>
+</body>
+
+</html>

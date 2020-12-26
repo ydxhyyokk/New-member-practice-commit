@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <meta charset="UTF-8">
+        <title>To do list</title>
+    <head>
+    <body>
+        <div class="titlecontainer">
+            <h1>· Todolist ·</h1>
+        </div>
+        <div class="main" id="app">
+            <table>
+                <thead class="containerh">
+                    <tr>
+                        <th width="50%">To do</th>
+                        <th width="20%">Deadline</th>
+                        <th width="15%">Finished</th>
+                        <th width="15%">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(todo,index) in todos">
+                        <td>{{ todo.name }}</td>
+                        <td>{{ todo.ddl }}</td>
+                        <td><button v-on:click="change(index)">{{ todo.finished }}</button></td>
+                        <td><button v-on:click="deleted(index)">Delete</button></td>
+                    </tr>
+                </tbody>
+                <tfoot class="containerf">
+                    <td><input width="100%" v-model="ntodo.name"></td>
+                    <td><input v-model="ntodo.ddl"></td>
+                    <td colspan="2"><button v-on:click="add">Add</button></td>
+                </tfoot>
+            </table>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -24,13 +24,13 @@
                     <tr v-for="(todo,index) in todos">
                         <td>{{ todo.name }}</td>
                         <td>{{ todo.ddl }}</td>
-                        <td><button v-on:click="change(index)">{{ todo.finished }}</button></td>
+                        <td><button :style="todo.style" v-on:click="change(index)">{{ todo.finished }}</button></td>
                         <td><button v-on:click="deleted(index)">Delete</button></td>
                     </tr>
                 </tbody>
-                <tfoot class="containerf">
+                <tfoot>
                     <td><input width="100%" v-model="ntodo.name"></td>
-                    <td><input v-model="ntodo.ddl"></td>
+                    <td><input type="date" v-model="ntodo.ddl"></td>
                     <td colspan="2"><button v-on:click="add">Add</button></td>
                 </tfoot>
             </table>

@@ -1,3 +1,4 @@
+// @ts-ignore
 var app = new Vue({
     el: '#app',
     data: {
@@ -5,23 +6,32 @@ var app = new Vue({
         ntodo: {
             name: "",
             ddl: "",
-            finished: "Unfinished"
+            finished: "Unfinished",
+            style: "background-color: red"
         }
     },
     methods: {
         add: function() {
-            this.todos.push(this.ntodo);
-            this.ntodo = {
-                name: "",
-                ddl: "",
-                finished: "Unfinished"
-            };
+            // @ts-ignore
+            if (this.ntodo.name && this.ntodo.ddl) {
+                // @ts-ignore
+                this.todos.push(this.ntodo);
+                this.ntodo = {
+                    name: "",
+                    ddl: "",
+                    finished: "Unfinished",
+                    style: "background-color: red"
+                };
+            }
         },
         change: function(i) {
-            if (this.todos[i].finished == "Finished")
+            if (this.todos[i].finished == "Finished") {
+                this.todos[i].style = "background-color: red";
                 this.todos[i].finished = "Unfinished";
-            else
+            } else {
+                this.todos[i].style = "background-color: green";
                 this.todos[i].finished = "Finished";
+            }
         },
         deleted: function(i) {
             this.todos.splice(i, 1);
@@ -36,6 +46,7 @@ var app = new Vue({
         if (tmp != null) {
             this.todos = tmp;
         }
+        // @ts-ignore
         add();
     },
     updated: function() {

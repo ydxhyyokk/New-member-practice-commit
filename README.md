@@ -194,6 +194,8 @@ You can use the [GitHub Desktop](https://desktop.github.com/) Software or whatev
 
 ### Clone this repo
 
+First thing you need to do is click the "fork" button at the top-right corner of the screen. This creates your own copy of the repo. Now you need to download (or clone) this repo to your own machine. If you don't do this at this point, it's also fine—you probably don't (not yet, at least) have write access to the repo, so when you push, you will be asked to create a fork.
+
 Before cloning, you need to install your GUI client and set up your GitHub account. For GitHub Desktop, simply go to `File > Options > Accounts` and log in to your GitHub account.
 
 Then, visit `File > Clone Repository` to clone this repo. Choose the local path at your preference.
